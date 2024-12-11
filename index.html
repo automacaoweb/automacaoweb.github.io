@@ -3,133 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Tecnologia</title>
+    <title>automacaoweb</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
         header {
-            background-color: #333;
+            background: #333;
             color: #fff;
-            padding: 20px;
-            text-align: center;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
         }
-        main {
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        #branding {
+            float: left;
+        }
+        #branding h1 {
+            margin: 0;
+        }
+        nav {
+            float: right;
+            margin-top: 10px;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            display: inline;
+            margin-left: 5px;
+        }
+        .topics {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
+            justify-content: space-between;
         }
         .topic {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background: #fff;
             margin: 10px;
             padding: 20px;
-            width: calc(33% - 40px);
-            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 30%;
         }
-        .topic h2 {
-            font-size: 1.5em;
-            margin: 0 0 10px;
-        }
-        .topic p {
-            font-size: 1em;
-            margin: 0 0 10px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
+        .topic img {
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Blog de Tecnologia</h1>
-        <p>Bem-vindo ao nosso blog! Aqui você encontrará as últimas novidades sobre tecnologia.</p>
+        <div class="container">
+            <div id="branding">
+                <h1>Blog sobre Tecnologia</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#topico1">Tópico 1</a></li>
+                    <li><a href="#topico2">Tópico 2</a></li>
+                    <li><a href="#topico3">Tópico 3</a></li>
+                    <!-- Adicione mais links conforme necessário -->
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <div class="topic">
-            <h2>Tópico 1</h2>
-            <p>Descrição do tópico 1...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 2</h2>
-            <p>Descrição do tópico 2...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 3</h2>
-            <p>Descrição do tópico 3...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 4</h2>
-            <p>Descrição do tópico 4...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 5</h2>
-            <p>Descrição do tópico 5...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 6</h2>
-            <p>Descrição do tópico 6...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 7</h2>
-            <p>Descrição do tópico 7...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 8</h2>
-            <p>Descrição do tópico 8...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 9</h2>
-            <p>Descrição do tópico 9...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 10</h2>
-            <p>Descrição do tópico 10...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 11</h2>
-            <p>Descrição do tópico 11...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 12</h2>
-            <p>Descrição do tópico 12...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 13</h2>
-            <p>Descrição do tópico 13...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 14</h2>
-            <p>Descrição do tópico 14...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 15</h2>
-            <p>Descrição do tópico 15...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 16</h2>
-            <p>Descrição do tópico 16...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 17</h2>
-            <p>Descrição do tópico 17...</p>
-        </div>
-        <div class="topic">
-            <h2>Tópico 18</h2>
-            <p>Descrição do tópico 18...</p>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Blog de Tecnologia. Todos os direitos reservados.</p>
-    </footer>
+    <div class="container">
+        <section class="topics">
+            <div class="topic" id="topico1">
+                <h2>Tópico 1</h2>
+                <img src="imagem1.jpg" alt="Imagem do Tópico 1">
+                <p>Descrição do tópico 1...</p>
+            </div>
+            <div class="topic" id="topico2">
+                <h2>Tópico 2</h2>
+                <img src="imagem2.jpg" alt="Imagem do Tópico 2">
+                <p>Descrição do tópico 2...</p>
+            </div>
+            <div class="topic" id="topico3">
+                <h2>Tópico 3</h2>
+                <img src="imagem3.jpg" alt="Imagem do Tópico 3">
+                <p>Descrição do tópico 3...</p>
+            </div>
+            <!-- Continue adicionando tópicos até o 18 -->
+            <div class="topic" id="topico18">
+                <h2>Tópico 18</h2>
+                <img src="imagem18.jpg" alt="Imagem do Tópico 18">
+                <p>Descrição do tópico 18...</p>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
