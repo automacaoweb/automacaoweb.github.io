@@ -18,7 +18,7 @@
 .topic img {
     width: 100%;       /* Ocupa a largura total do card */
     max-width: 100%;   /* Garante que não ultrapasse o limite */
-    height: 200px;     /* Altura fixa uniforme */
+    height: 250px;     /* Altura fixa uniforme */
     display: block;    /* Remove espaços vazios abaixo da imagem */
     
     /* O "pulo do gato" para centralizar o conteúdo da imagem */
