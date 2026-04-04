@@ -12,3 +12,10 @@ body{
     padding: 15px;
     text-align: center;
 }
+.topic img {
+    width: 250px;      /* Largura fixa */
+    height: 150px;     /* Altura fixa */
+    display: block;    /* Ajuda no alinhamento */
+    margin: 0 auto;    /* Centraliza a imagem no card */
+    object-fit: contain; /* Garante que a imagem inteira apareça, mesmo que sobre espaço */
+}
