@@ -16,8 +16,8 @@
 
 /* Ajuste da Imagem */
 .topic img {
-    width: 100%;       /* Ocupa a largura total do card */
-    max-width: 100%;   /* Garante que não ultrapasse o limite */
+    width: 150px;       /* Ocupa a largura total do card */
+    max-width: 150px;   /* Garante que não ultrapasse o limite */
     height: 150px;     /* Altura fixa uniforme */
     max-height: 150px;      
     display: block;    /* Remove espaços vazios abaixo da imagem */
