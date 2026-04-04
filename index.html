@@ -6,8 +6,7 @@
     <title>automacaoweb</title>
     
     <style>
-        
-        /* Reset básico para evitar comportamentos inesperados */
+        /* Reset básico */
         * {
             box-sizing: border-box;
         }
@@ -20,7 +19,7 @@
         }
 
         .container {
-            width: 90%; /* Aumentei um pouco para aproveitar melhor o espaço */
+            width: 95%;
             max-width: 1200px;
             margin: auto;
             overflow: hidden;
@@ -34,51 +33,59 @@
             text-align: center;
         }
 
-        /* Configuração da Grade (Grid de Flexbox) */
+        /* Configuração da Grade */
         .topics {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start; /* Alinha os itens ao início da linha */
+            justify-content: flex-start;
             margin-top: 20px;
+            margin-bottom: 40px;
         }
 
-        /* Cada Card (Coluna) */
+        /* Cada Card */
         .topic {
             background: #fff;
-            margin: 10px; /* Margem entre os cards */
+            margin: 10px;
             padding: 15px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            
-            /* Cálculo mágico: 100% dividido por 3 colunas, menos as margens laterais */
             width: calc(33.333% - 20px); 
-            
             text-align: center;
+            border-radius: 8px;
         }
 
         /* Estilo das Imagens */
         .topic img {
-            width: 100%;       /* Ocupa toda a largura do card */
-            height: 200px;     /* Altura fixa para manter o padrão */
-            object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
             display: block;
             border-radius: 4px;
+            margin-bottom: 10px;
         }
 
-        /* Responsividade: para telas de celular, vira 1 coluna só */
-        @media (max-width: 768px) {
+        .topic p {
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0 5px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
             .topic {
-                width: calc(50% - 20px); /* 2 colunas em tablets */
+                width: calc(50% - 20px);
             }
         }
-        @media (max-width: 480px) {
+
+        @media (max-width: 600px) {
             .topic {
-                width: 100%; /* 1 coluna em celulares */
+                width: 100%;
                 margin: 10px 0;
             }
         }
     </style>
 </head>
 <body>
+
     <header>
         <div class="container">
             <h1>automacaoweb</h1>
@@ -87,6 +94,7 @@
 
     <div class="container">
         <section class="topics">
+            
             <div class="topic" id="topico1">
                 <img src="/Images/beckhoff.png" alt="BECKHOFF">
                 <p>Beckhoff</p>
@@ -115,6 +123,7 @@
             <div class="topic" id="topico6">
                 <img src="/Images/TF2000 ADV.png" alt="TwinCAT - HMI ADVANCED">
                 <p>TF2000 - Advanced</p>
+            </div>
 
             <div class="topic" id="topico7">
                 <img src="/Images/TE9000.png" alt="SAFETY">
@@ -128,36 +137,41 @@
 
             <div class="topic" id="topico9">
                 <img src="/Images/TF3600.png" alt="TwinCAT - Condition Monitoring">
-                <p>TF3600</p>                    
+                <p>TF3600</p>
             </div>
 
             <div class="topic" id="topico10">
                 <img src="/Images/TF5000.png" alt="TwinCAT - POINT TO POINT">
-                <p>TF5000</p>                    
-            </div>            
+                <p>TF5000</p>
+            </div>
 
             <div class="topic" id="topico11">
                 <img src="/Images/TF5050.png" alt="TwinCAT - CAMMING">
-                <p>TF5050</p>                    
-            </div>   
+                <p>TF5050</p>
+            </div>
 
             <div class="topic" id="topico12">
                 <img src="/Images/TF5100.png" alt="TwinCAT - NCI">
-                <p>TF5100</p>                    
-            </div>     
+                <p>TF5100</p>
+            </div>
 
             <div class="topic" id="topico13">
                 <img src="/Images/TF5200.png" alt="TwinCAT - CNC">
-                <p>TF5200</p>                    
-            </div> 
+                <p>TF5200</p>
+            </div>
 
             <div class="topic" id="topico14">
                 <img src="/Images/TF6010.png" alt="TwinCAT - ADS MONITOR">
-                <p>TF6010</p>                    
-            </div>        
+                <p>TF6010</p>
+            </div>
 
             <div class="topic" id="topico15">
                 <img src="/Images/TF6100.png" alt="TwinCAT - OPC UA">
-                <p>TF6100</p>                    
-            </div>                       
-            
+                <p>TF6100</p>
+            </div>
+
+        </section>
+    </div>
+
+</body>
+</html>
