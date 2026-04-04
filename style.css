@@ -18,6 +18,7 @@
 .topic img {
     width: 100%;       /* Ocupa a largura total do card */
     max-width: 100%;   /* Garante que não ultrapasse o limite */
+    height: 150px;     /* Altura fixa uniforme */
     max-height: 180px;      
     display: block;    /* Remove espaços vazios abaixo da imagem */
     
