@@ -22,7 +22,7 @@
     max-height: 150px;      
     display: block;    /* Remove espaços vazios abaixo da imagem */
     
-    /* O "pulo do gato" para centralizar o conteúdo da imagem */
+    /*centralizar o conteúdo da imagem */
     object-fit: contain; /* Ou 'cover' se quiser que preencha tudo sem bordas */
     object-position: center; 
     
