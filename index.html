@@ -5,107 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>automacaoweb</title>
     <style>
+        /* Reset básico para evitar comportamentos inesperados */
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
+
         .container {
-            width: 80%;
+            width: 90%; /* Aumentei um pouco para aproveitar melhor o espaço */
+            max-width: 1200px;
             margin: auto;
             overflow: hidden;
         }
+
         header {
             background: #333;
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
+            padding: 20px 0;
             border-bottom: #77aaff 3px solid;
+            text-align: center;
         }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        #branding {
-            float: left;
-        }
-        #branding h1 {
-            margin: 0;
-        }
-        nav {
-            float: right;
-            margin-top: 10px;
-        }
-        nav ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        nav ul li {
-            display: inline;
-            margin-left: 5px;
-        }
+
+        /* Configuração da Grade (Grid de Flexbox) */
         .topics {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: flex-start; /* Alinha os itens ao início da linha */
+            margin-top: 20px;
         }
+
+        /* Cada Card (Coluna) */
         .topic {
             background: #fff;
-            margin: 10px;
-            padding: 10px;
+            margin: 10px; /* Margem entre os cards */
+            padding: 15px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            width: 30%;
+            
+            /* Cálculo mágico: 100% dividido por 3 colunas, menos as margens laterais */
+            width: calc(33.333% - 20px); 
+            
+            text-align: center;
         }
+
+        /* Estilo das Imagens */
         .topic img {
-            width: 100%;
+            width: 100%;       /* Ocupa toda a largura do card */
+            height: 200px;     /* Altura fixa para manter o padrão */
+            object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+            display: block;
+            border-radius: 4px;
+        }
+
+        /* Responsividade: para telas de celular, vira 1 coluna só */
+        @media (max-width: 768px) {
+            .topic {
+                width: calc(50% - 20px); /* 2 colunas em tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            .topic {
+                width: 100%; /* 1 coluna em celulares */
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div id="branding">
-                <h1>...sobre Automação</h1>
-            </div>
+            <h1>automacaoweb</h1>
         </div>
     </header>
+
     <div class="container">
         <section class="topics">
             <div class="topic" id="topico1">
-                <img src="/Images/beckhoff.png" alt="Leia-me">
+                <img src="/Images/beckhoff.png" alt="Beckhoff">
+                <p>Beckhoff</p>
             </div>
+            
             <div class="topic" id="topico2">
-                <img src="/Images/TC 4024.png" width="35" height="35" alt="TwinCAT 3 - Build 4026">
+                <img src="/Images/TC 4024.png" alt="TwinCAT 3 - 4024">
+                <p>Build 4024</p>
             </div>
+
             <div class="topic" id="topico3">
-                <img src="/Images/TC 4026.png" width="50" height="150" alt="TwinCAT 3 - Build 4026">
+                <img src="/Images/TC 4026.png" alt="TwinCAT 3 - 4026">
+                <p>Build 4026</p>
             </div>
+
             <div class="topic" id="topico4">
-                <img src="/Images/TF1200.png" width="50" height="150" alt="TwinCAT - HMI">
-            </div>              
+                <img src="/Images/TF1200.png" alt="TwinCAT - HMI">
+                <p>TF1200</p>
+            </div>
+
             <div class="topic" id="topico5">
                 <img src="/Images/TF2000.png" alt="TwinCAT - HMI">
-            </div>  
+                <p>TF2000</p>
+            </div>
+
             <div class="topic" id="topico6">
                 <img src="/Images/TF2000 ADV.png" alt="TwinCAT - HMI">
-            </div>                        
-            <div class="topic" id="topico7">
-                <img src="/Images/TF1800.png" alt="TwinCAT - PLC HMI">
-            </div>
-            <div class="topic" id="topico8">
-                <img src="/Images/TF1810.png" alt="TwinCAT - PLC HMI WEB">
-            </div>                                
-            <!-- Continue adicionando tópicos até o 18 -->
-            <div class="topic" id="topico18">
-                <h2>Tópico 18</h2>
-                <img src="imagem18.jpg" alt="Imagem do Tópico 18">
-                <p>Descrição do tópico 18...</p>
-            </div>
-        </section>
-    </div>
-</body>
-</html>
+                <p>TF2000
